@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20C3F73F1FC5691D0062AB0C /* ViewAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C3F73E1FC5691D0062AB0C /* ViewAnimationController.swift */; };
 		C4BEE2EB1FC475E100862D15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BEE2EA1FC475E100862D15 /* AppDelegate.swift */; };
 		C4BEE2ED1FC475E100862D15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BEE2EC1FC475E100862D15 /* ViewController.swift */; };
 		C4BEE2F01FC475E100862D15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4BEE2EE1FC475E100862D15 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20C3F73E1FC5691D0062AB0C /* ViewAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnimationController.swift; sourceTree = "<group>"; };
 		C4BEE2E71FC475E100862D15 /* Animations-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Animations-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4BEE2EA1FC475E100862D15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4BEE2EC1FC475E100862D15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20C3F73D1FC568F20062AB0C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C4BEE2EC1FC475E100862D15 /* ViewController.swift */,
+				20C3F73E1FC5691D0062AB0C /* ViewAnimationController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		C4BEE2DE1FC475E100862D15 = {
 			isa = PBXGroup;
 			children = (
@@ -97,8 +108,8 @@
 		C4BEE2E91FC475E100862D15 /* Animations-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				20C3F73D1FC568F20062AB0C /* ViewControllers */,
 				C4BEE2EA1FC475E100862D15 /* AppDelegate.swift */,
-				C4BEE2EC1FC475E100862D15 /* ViewController.swift */,
 				C4BEE2EE1FC475E100862D15 /* Main.storyboard */,
 				C4BEE2F11FC475E100862D15 /* Assets.xcassets */,
 				C4BEE2F31FC475E100862D15 /* LaunchScreen.storyboard */,
@@ -261,6 +272,7 @@
 			files = (
 				C4BEE2ED1FC475E100862D15 /* ViewController.swift in Sources */,
 				C4BEE2EB1FC475E100862D15 /* AppDelegate.swift in Sources */,
+				20C3F73F1FC5691D0062AB0C /* ViewAnimationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,7 +439,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8TC2A5YZC5;
+				DEVELOPMENT_TEAM = KY748RT68A;
 				INFOPLIST_FILE = "Animations-Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -443,7 +455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8TC2A5YZC5;
+				DEVELOPMENT_TEAM = KY748RT68A;
 				INFOPLIST_FILE = "Animations-Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
