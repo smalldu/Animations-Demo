@@ -9,16 +9,30 @@
 import UIKit
 
 class CustomView: UIView {
-  
   override class var layerClass: AnyClass {
-    return CustomLayer.self
+    return CAGradientLayer.self
+  }
+  
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+    prepareView()
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+    prepareView()
+  }
+  
+  func prepareView(){
+    if let gradientLayer = self.layer as? CAGradientLayer{
+      gradientLayer.colors = [ UIColor.red.cgColor,UIColor.blue.cgColor ]
+      gradientLayer.startPoint = CGPoint.zero
+      gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+    }
   }
   
 }
 
-class CustomLayer: CALayer {
-  
-}
 
 class LayerController: UIViewController {
   
@@ -30,6 +44,9 @@ class LayerController: UIViewController {
   
   @IBOutlet weak var view4: UIView!
   @IBOutlet weak var view5: UIView!
+  @IBOutlet weak var view6: CustomView!
+  @IBOutlet weak var view7: UIView!
+  
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -71,8 +88,23 @@ class LayerController: UIViewController {
     view5.layer.contentsScale = #imageLiteral(resourceName: "cat").scale
     
     
-    
+    var transform = CATransform3DIdentity
+    transform.m34 = -1.0 / 500.0
+    transform = CATransform3DRotate(transform, CGFloat(Double.pi / 4), 0, 1, 0)
+    view4.layer.transform = transform
   }
+  
+  let shapeLayer = CAShapeLayer()
+  func configShapelayer(){
+    let rect = view7.bounds
+    let path = UIBezierPath(ovalIn: rect)
+    shapeLayer.path = path.cgPath
+    shapeLayer.strokeColor = UIColor.red.cgColor
+    shapeLayer.fillColor = UIColor.clear.cgColor
+    shapeLayer.frame = view7.bounds
+    view7.layer.addSublayer(shapeLayer)
+  }
+  
   
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
@@ -81,6 +113,15 @@ class LayerController: UIViewController {
     layer.contentsScale = #imageLiteral(resourceName: "star").scale
     layer.frame = view5.bounds
     view5.layer.mask = layer
+//    view5.layer.isDoubleSided
+//    CATransform3DMakeScale(<#T##sx: CGFloat##CGFloat#>, <#T##sy: CGFloat##CGFloat#>, <#T##sz: CGFloat##CGFloat#>)
+//    CATransform3DMakeRotation(<#T##angle: CGFloat##CGFloat#>, <#T##x: CGFloat##CGFloat#>, <#T##y: CGFloat##CGFloat#>, <#T##z: CGFloat##CGFloat#>)
+//    CATransform3DMakeTranslation(<#T##tx: CGFloat##CGFloat#>, <#T##ty: CGFloat##CGFloat#>, <#T##tz: CGFloat##CGFloat#>)
+//    CATransform3D.init(m11: , m12: , m13: , m14: , m21: , m22: , m23: , m24: , m31: , m32: , m33: , m34: , m41: , m42: , m43: , m44: )
+//    view5.layer.setAffineTransform(<#T##m: CGAffineTransform##CGAffineTransform#>)
+//    view5.layer.setValue(layer, forKeyPath: "mask")
+//    view5.layer[keyPath:\CALayer.mask] = layer
+    configShapelayer()
   }
   
 }
