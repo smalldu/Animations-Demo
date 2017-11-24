@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2051CC551FC804E20055971F /* CoreAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2051CC541FC804E20055971F /* CoreAnimationController.swift */; };
 		20C3F73F1FC5691D0062AB0C /* ViewAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C3F73E1FC5691D0062AB0C /* ViewAnimationController.swift */; };
 		C42440781FC5C78C009176FF /* ImageViewAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42440771FC5C78C009176FF /* ImageViewAnimationController.swift */; };
 		C424407A1FC705EB009176FF /* LayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42440791FC705EB009176FF /* LayerController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2051CC541FC804E20055971F /* CoreAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAnimationController.swift; sourceTree = "<group>"; };
 		20C3F73E1FC5691D0062AB0C /* ViewAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnimationController.swift; sourceTree = "<group>"; };
 		C42440771FC5C78C009176FF /* ImageViewAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewAnimationController.swift; sourceTree = "<group>"; };
 		C42440791FC705EB009176FF /* LayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				20C3F73E1FC5691D0062AB0C /* ViewAnimationController.swift */,
 				C42440771FC5C78C009176FF /* ImageViewAnimationController.swift */,
 				C42440791FC705EB009176FF /* LayerController.swift */,
+				2051CC541FC804E20055971F /* CoreAnimationController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				20C3F73F1FC5691D0062AB0C /* ViewAnimationController.swift in Sources */,
 				C42440781FC5C78C009176FF /* ImageViewAnimationController.swift in Sources */,
 				C424407A1FC705EB009176FF /* LayerController.swift in Sources */,
+				2051CC551FC804E20055971F /* CoreAnimationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
